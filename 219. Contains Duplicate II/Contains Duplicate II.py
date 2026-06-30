@@ -1,5 +1,7 @@
 from typing import List
 
+
+# Time complexity -> O(n), space compexity -> O(n)
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
         hs = set()
