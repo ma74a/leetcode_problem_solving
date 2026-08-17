@@ -18,6 +18,8 @@ class Solution:
             cur = nex
             nex = nex.next
 
+        cur.next = prv
+
         return cur
 
 
