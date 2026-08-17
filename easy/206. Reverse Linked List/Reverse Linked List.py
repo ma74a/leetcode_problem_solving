@@ -9,6 +9,8 @@ class ListNode:
 # Time complexity -> O(n), space compexity -> O(1)
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head is None or head.next is None:
+            return head
         prv = None
         cur = head
         nex = head.next
