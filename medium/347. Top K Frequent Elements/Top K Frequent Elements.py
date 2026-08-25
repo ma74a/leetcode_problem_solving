@@ -24,6 +24,29 @@ class Solution:
             ans.append(freq[i][1])
         
         return ans
+
+#############################################################################
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        hm = {}
+        for n in nums:
+            if n not in hm:
+                hm[n] = 1
+            else:
+                hm[n] += 1
+
+        sorted_dict = dict(sorted(hm.items(), key=lambda x: x[1], reverse=True))
+
+        ans = []
+        for key, val in sorted_dict.items():
+            if k == 0:
+                break
+
+            ans.append(key)
+            k -= 1
+
+        return ans
         
 
 
