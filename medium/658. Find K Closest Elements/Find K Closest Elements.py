@@ -22,19 +22,19 @@ class Solution:
 ########################################################################################
 
 # Time complexity -> O(nlog(n)), space compexity -> O(n)
-# class Solution:
-#     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
-#         distances = []
-#         for n in arr:
-#             dist = abs(n - x)
-#             distances.append((dist, n))
+class Solution:
+    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
+        distances = []
+        for n in arr:
+            dist = abs(n - x)
+            distances.append((dist, n))
 
-#         distances.sort(key=lambda y: y[0])
-#         ans = []
-#         for i in range(k):
-#             ans.append(distances[i][1])
+        distances.sort(key=lambda y: y[0])
+        ans = []
+        for i in range(k):
+            ans.append(distances[i][1])
 
-#         return ans.sort()
+        return ans.sort()
 
 
 
