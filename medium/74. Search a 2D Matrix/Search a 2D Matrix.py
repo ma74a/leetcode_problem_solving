@@ -15,9 +15,8 @@ class Solution:
         high = len(matrix) - 1 # no of rows
         while low <= high:
             mid = low + (high - low) // 2
-            # print(matrix[mid][len(matrix[0])-1])
-            # print(matrix[mid][0])
-            # print()
+
+            # Is the target between the first and last element of this row?
             if matrix[mid][0] <= target and target <= matrix[mid][len(matrix[0])-1]:
                 return mid
             elif matrix[mid][0] < target:
