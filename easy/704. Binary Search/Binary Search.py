@@ -5,7 +5,6 @@ class Solution:
         l, r = 0, len(nums) - 1
         while l <= r:
             mid = (l + r) // 2
-            print(mid)
             if nums[mid] == target:
                 return mid
             elif nums[mid] < target:
